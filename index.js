@@ -7,13 +7,13 @@ app.listen(process.env.PORT || 3000, ()=> console.log( Website running ));
 
 require( './settings' )
 const fs = require( 'fs' )
-const chalk = require( chalk )
-const path = require( path )
-const axios = require( axios )
-const { handleMessages, handleGroupParticipantUpdate, handleStatus } = require( ./main );
+const chalk = require( 'chalk' )
+const path = require( 'path' )
+const axios = require( 'axios' )
+const { handleMessages, handleGroupParticipantUpdate, handleStatus } = require( './main' );
 const PhoneNumber = require( awesome-phonenumber )
-const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require( ./lib/exif )
-const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await, sleep, reSize } = require( ./lib/myfunc )
+const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require( './lib/exif' )
+const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await, sleep, reSize } = require( './lib/myfunc' )
 const {
     default: makeWASocket,
     useMultiFileAuthState,
@@ -26,13 +26,13 @@ const {
 } = require("@whiskeysockets/baileys")
 const NodeCache = require("node-cache")
 const pino = require("pino")
-const { rmSync } = require( fs )
-const store = require( ./lib/lightweight_store )
+const { rmSync } = require( 'fs' )
+const store = require( './lib/lightweight_store' )
 store.readFromFile()
-const settings = require( ./settings )
+const settings = require( './settings' )
 setInterval(() => store.writeToFile(), settings.storeWriteInterval || 10000)
 
-let phoneNumber = "255612491554"
+let phoneNumber = "967739020737"
 let owner = JSON.parse(fs.readFileSync( ./data/owner.json ))
 global.botname = "SILA MD"
 global.themeemoji = "•"
